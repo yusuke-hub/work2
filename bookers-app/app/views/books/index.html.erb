@@ -13,7 +13,7 @@
     <tr>
         <td class="title"><%= list.title %></td>
         <td class="body"><%= list.body %></td>
-        <td class="blank"><%= link_to "Show", todolist_path(list.id) %>&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to "Edit", edit_todolist_path(list.id) %>&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to "Destroy", destroy_todolist_path(list.id), method: :delete, "data-confirm" => "Are you sure?" %></td>
+        <td class="blank"><%= link_to "Show", book_path(list.id) %>&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to "Edit", edit_book_path(list.id) %>&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to "Destroy", destroy_book_path(list.id), method: :delete, "data-confirm" => "Are you sure?" %></td>
     </tr>
     <% end %>
 </table>
@@ -29,7 +29,7 @@
     </ul>
   </div>
 <% end %>
-<%= form_for(@newlist,url:'/todolists') do |f| %>
+<%= form_for(@newlist,url:'/books') do |f| %>
     <div class="field_with_errors">
     <p>Title</p>
     <%= f.text_field :title %>      
