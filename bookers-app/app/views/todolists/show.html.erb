@@ -1,0 +1,9 @@
+<div class="show">
+  <div class="show-title clearfix1">
+  <h4>Title:&nbsp;</h4><p><%= @list.title %></p>
+  </div>
+   <div class="show-body clearfix2">
+    <h4>Body:&nbsp;</h4><p><%= @list.body %></p>
+  </div>
+<p><%= link_to "Edit",edit_todolist_path(@list.id) %> | <%= link_to "Back", index_todolist_path %></p>
+</div>
