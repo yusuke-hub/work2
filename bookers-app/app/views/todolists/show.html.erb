@@ -1,3 +1,7 @@
+<% if flash[:notice] %>
+  <p><%= flash[:notice] %></p>
+<% end %>  
+
 <div class="show">
   <div class="show-title clearfix1">
   <h4>Title:&nbsp;</h4><p><%= @list.title %></p>

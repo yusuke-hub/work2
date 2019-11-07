@@ -8,7 +8,8 @@ class TodolistsController < ApplicationController
   def create
     @list = List.new(list_params)
     if @list.save
-    redirect_to todolist_path(@list.id),notice:"Book was successfully created."
+    flash[:notice] = "Book was successfully created."
+    redirect_to todolist_path(@list.id)
     else
         @lists = List.all
         @newlist = List.new
